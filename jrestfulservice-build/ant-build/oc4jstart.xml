@@ -1,0 +1,9 @@
+<project name="jrestfulservice" basedir="." default="oc4jstart">
+  <property name="oc4j.jar" value="D:/Softwares/Oracle/oc4j_extended_101350/j2ee/home/oc4j.jar"/>
+	
+  <target name="oc4jstart" depends="">
+	  <echo message="***** Starting Server *****" />
+	  <java jar="${oc4j.jar}" fork="yes">
+	  </java>
+  </target>
+</project>

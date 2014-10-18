@@ -1,4 +1,4 @@
-<project name="jrestfulservice" basedir="." default="build">
+<project name="jrestfulservice" basedir="." default="cleanup">
 	<property name="jrestfulservice.dir" location=".." /> 
     <property name="app.webcontent.dir" location="../jrestfulservice/WebContent"/>
     <property name="app.classes.dir" location="${app.webcontent.dir}/WEB-INF/classes"/>
@@ -8,7 +8,8 @@
 	<property name="dist.dir" location="dist"/>
     <property name="tmp.dir" location="tmp"/>   
 	
-	<property name="javac.source" value="1.6" description="Sets the javac source= attribute, necessary for clover code coverage" />
+	<property name="javac.source" value="1.6" description="Sets the javac source = attribute, necessary for clover code coverage" />
+	
 	<path id="app.compile.classpath">
 	    <fileset dir="${app.lib.dir}" includes="*.jar"/>
 	</path>
@@ -62,7 +63,9 @@
                      includes="orion-application.xml" />
         </ear>      
     </target>
-	<target name="cleanup">
-			<delete dir="tmp"/> 
+	
+	<target name="cleanup" depends="ear">
+		<delete dir="tmp"/> 
     </target>
+	
 </project>
