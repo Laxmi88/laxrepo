@@ -5,10 +5,13 @@ package com.lax.jersey.restful.emp.model;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * @author Lax
  *
  */
+@XmlRootElement
 public class Employee implements Serializable {
 	
 	/**

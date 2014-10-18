@@ -1,0 +1,68 @@
+<project name="jrestfulservice" basedir="." default="build">
+	<property name="jrestfulservice.dir" location=".." /> 
+    <property name="app.webcontent.dir" location="../jrestfulservice/WebContent"/>
+    <property name="app.classes.dir" location="${app.webcontent.dir}/WEB-INF/classes"/>
+    <property name="app.src.dir" location="../jrestfulservice/src"/>
+    <property name="app.lib.dir" location="${app.webcontent.dir}/WEB-INF/lib"/> 
+	<property name="app.resource.dir" location="${app.webcontent.dir}/WEB-INF/properties"/>
+	<property name="dist.dir" location="dist"/>
+    <property name="tmp.dir" location="tmp"/>   
+	
+	<property name="javac.source" value="1.6" description="Sets the javac source= attribute, necessary for clover code coverage" />
+	<path id="app.compile.classpath">
+	    <fileset dir="${app.lib.dir}" includes="*.jar"/>
+	</path>
+	
+	<target name="init">
+        <mkdir dir="${app.classes.dir}"/>
+		<mkdir dir="${dist.dir}"/> 
+		<mkdir dir="${tmp.dir}"/>  
+    </target>  
+	
+	<target name="clean">
+        <delete failonerror="false">
+            <fileset dir="${app.classes.dir}" includes="**/*"/>   
+        	<fileset dir="${dist.dir}" includes="**/*"/>    
+        </delete>
+		<delete dir="tmp"/> 
+		<delete dir="tmp1"/> 
+    </target>
+	
+	<target name="build" depends="clean,init">
+	        <javac srcdir="${app.src.dir}"
+	               destdir="${app.classes.dir}"
+	               debug="on"
+	               memoryMaximumSize="512M"
+	        	   source="${javac.source}"
+	               fork="yes">
+	            <classpath refid="app.compile.classpath"/>   
+	        </javac>
+    </target>
+	
+	<target name="get.resources">
+        <copy todir="${app.classes.dir}" overwrite="true">
+            <fileset dir="${app.resource.dir}" includes="**/*"/>
+        </copy>
+		
+    </target>
+	
+	<target name="war" depends="build,get.resources">
+        <war warfile="${tmp.dir}/jrestfulservice.war" webxml="${app.webcontent.dir}/WEB-INF/web.xml">
+            <fileset dir="${app.webcontent.dir}">
+                <exclude name="WEB-INF/web.xml"/>
+                <exclude name="WEB-INF/lib/ojdbc14.jar"/>
+            </fileset>
+        </war>      
+    </target>
+	
+	 <target name="ear" depends="war">
+        <ear earfile="${dist.dir}/jrestfulservice.ear" appxml="${app.webcontent.dir}/META-INF/application.xml">
+            <fileset dir="${tmp.dir}" includes="jrestfulservice.war" />
+            <metainf dir="${dist.dir}" 
+                     includes="orion-application.xml" />
+        </ear>      
+    </target>
+	<target name="cleanup">
+			<delete dir="tmp"/> 
+    </target>
+</project>
