@@ -1,4 +1,4 @@
-<project name="jrestfulservice" basedir="." default="deploy-oc4j" xmlns:oracle="antlib:oracle">
+<project name="jrestfulservice" basedir="." default="deploy-oc4j">
     <property name="app.name" value="jrestfulservice"/>
 	<property name="app.contextroot" value="jrestfulservice1"/>
 	<property name="app.version" value="1"/>
