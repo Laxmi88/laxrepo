@@ -9,11 +9,13 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.lax.jersey.restful.emp.constants.JRestfulConstants;
+
 /**
  * @author Lax
  *
  */
-@Path("employeeService")
+@Path(JRestfulConstants.EMPLOYEE_RESTFUL_URI)
 public class EmployeeService {
 	
 	@GET
