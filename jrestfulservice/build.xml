@@ -1,12 +1,5 @@
-<project name="jrestfulservice" basedir="." default="build">
-	<property name="jrestfulservice.dir" location=".." /> 
-    <property name="app.webcontent.dir" location="../jrestfulservice/WebContent"/>
-    <property name="app.classes.dir" location="${app.webcontent.dir}/WEB-INF/classes"/>
-    <property name="app.src.dir" location="../jrestfulservice/src"/>
-    <property name="app.lib.dir" location="${app.webcontent.dir}/WEB-INF/lib"/> 
-	<property name="app.resource.dir" location="${app.webcontent.dir}/WEB-INF/properties"/>
-	<property name="dist.dir" location="dist"/>
-    <property name="tmp.dir" location="tmp"/>   
+<project name="jrestfulservice" basedir="." default="ear">
+	<property file="build.properties"/> 
 	
 	<property name="javac.source" value="1.6" description="Sets the javac source = attribute, necessary for clover code coverage" />
 	

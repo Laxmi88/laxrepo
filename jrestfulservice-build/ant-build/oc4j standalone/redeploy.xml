@@ -1,14 +1,5 @@
 <project name="jrestfulservice" basedir="." default="redeploy-oc4j">
-    <property name="app.name" value="jrestfulservice"/>
-	<property name="app.contextroot" value="jrestfulservice1"/>
-	<property name="app.version" value="1"/>
-    <property name="dist.dir" location="D:/Softwares/Version control system/Git/laxrepo/jrestfulservice/dist"/>
-    <property name="oc4j.deployer.uri" value="ormi://localhost:23791"/>
-    <property name="oc4j.admin.user" value="oc4jadmin"/>
-    <property name="oc4j.admin.password" value="oc4jadmin"/>
-	<property name="oc4j.admin.jar" value="D:/Softwares/Oracle/oc4j_extended_101350/j2ee/home/admin.jar"/>
-	<property name="oc4j.auto.deploy.dir" value="D:/Softwares/Oracle/oc4j_extended_101350/j2ee/home/applications"/>
-	
+  <property file="build.properties"/> 
   <target name="redeploy-oc4j" depends="">
   	  <echo message="Copying the archive EAR from ${dist.dir} to Auto Deploy Dir ${oc4j.auto.deploy.dir}" />
   	  <copy file="${dist.dir}/${app.name}.ear" tofile="${oc4j.auto.deploy.dir}/${app.name}.ear"/>

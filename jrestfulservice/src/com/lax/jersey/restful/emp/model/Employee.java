@@ -6,12 +6,14 @@ package com.lax.jersey.restful.emp.model;
 import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * @author Lax
  *
  */
 @XmlRootElement
+@XmlType(propOrder={"employeeId","employeeName","employeeAge","employeeAdress"})
 public class Employee implements Serializable {
 	
 	/**

@@ -9,7 +9,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.lax.jersey.restful.emp.business.manager.EmployeeBusinessManager;
 import com.lax.jersey.restful.emp.constants.JRestfulConstants;
+import com.lax.jersey.restful.emp.model.Employee;
 
 /**
  * @author Lax
@@ -20,9 +22,10 @@ public class EmployeeService {
 	
 	@GET
 	@Path("/employeeId/{empId}")
-	@Produces(MediaType.TEXT_XML)
-	public String getEmployeeDetails(@PathParam("empId") Integer employeeId){
-		return "<Employee>" + "<EmployeeId>" + employeeId + "</EmployeeId>" + "</Employee>";
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	public Employee getEmployeeDetails(@PathParam("empId") Integer employeeId){
+//		return "<Employee>" + "<EmployeeId>" + employeeId + "</EmployeeId>" + "</Employee>";
+		return new EmployeeBusinessManager().getEmployeeDetails();
 	}
 
 }
