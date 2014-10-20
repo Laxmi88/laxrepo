@@ -1,4 +1,4 @@
-<project name="jrestfulservice" basedir="." default="cleanup">
+<project name="jrestfulservice" basedir="." default="build">
 	<property name="jrestfulservice.dir" location=".." /> 
     <property name="app.webcontent.dir" location="../jrestfulservice/WebContent"/>
     <property name="app.classes.dir" location="${app.webcontent.dir}/WEB-INF/classes"/>
@@ -34,8 +34,7 @@
 	               destdir="${app.classes.dir}"
 	               debug="on"
 	               memoryMaximumSize="512M"
-	        	   source="${javac.source}"
-	               fork="yes">
+	        	   source="${javac.source}">
 	            <classpath refid="app.compile.classpath"/>   
 	        </javac>
     </target>
@@ -64,7 +63,7 @@
         </ear>      
     </target>
 	
-	<target name="cleanup" depends="ear">
+	<target name="cleanup" depends="">
 		<delete dir="tmp"/> 
     </target>
 	
