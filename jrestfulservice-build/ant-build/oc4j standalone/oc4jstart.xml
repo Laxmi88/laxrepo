@@ -1,8 +1,12 @@
-<project name="jrestfulservice" basedir="." default="oc4jstart">
-  <property file="build.properties"/> 
-  <target name="oc4jstart" depends="">
-	  <echo message="***** Starting Server *****" />
-	  <java jar="${oc4j.jar}" fork="yes">
-	  </java>
-  </target>
+<project name="jrestfulservice-build" basedir="." default="oc4jstart">
+	
+	<property environment="env"/>
+	<property file="build.properties"/> 
+	
+	<target name="oc4jstart" depends="">
+		<echo message="***** Starting Server from path ${oc4j.jar}*****" />
+		<java jar="${oc4j.jar}" fork="yes">
+		</java>
+	</target>
+	
 </project>

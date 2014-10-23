@@ -40,7 +40,7 @@
     </target>
 	
 	<target name="war" depends="build,get.resources">
-        <war warfile="${tmp.dir}/jrestfulservice.war" webxml="${app.webcontent.dir}/WEB-INF/web.xml">
+        <war warfile="${tmp.dir}/${war.name}" webxml="${web.xml.dir}">
             <fileset dir="${app.webcontent.dir}">
                 <exclude name="WEB-INF/web.xml"/>
                 <exclude name="WEB-INF/lib/ojdbc14.jar"/>
@@ -49,8 +49,8 @@
     </target>
 	
 	 <target name="ear" depends="war">
-        <ear earfile="${dist.dir}/jrestfulservice.ear" appxml="${app.webcontent.dir}/META-INF/application.xml">
-            <fileset dir="${tmp.dir}" includes="jrestfulservice.war" />
+        <ear earfile="${dist.dir}/${ear.name}" appxml="${app.xml.dir}">
+            <fileset dir="${tmp.dir}" includes="${war.name}" />
             <metainf dir="${dist.dir}" 
                      includes="orion-application.xml" />
         </ear>      

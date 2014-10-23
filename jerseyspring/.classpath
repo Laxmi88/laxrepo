@@ -22,11 +22,13 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsr311-api-1.1.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jersey-spring-1.8.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-beans-3.2.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-context-3.2.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-context-support-3.2.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-core-3.2.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web-3.2.3.RELEASE.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-expression-3.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-aop.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-beans.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-context-support.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-context.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-core.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-jdbc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-tx.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

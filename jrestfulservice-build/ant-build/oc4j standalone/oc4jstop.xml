@@ -1,5 +1,8 @@
-<project name="jrestfulservice" basedir="." default="oc4jstop">
+<project name="jrestfulservice-build" basedir="." default="oc4jstop">
+	
+	<property environment="env"/>
 	<property file="build.properties"/> 
+	
 	<target name="oc4jstop" depends="">
 		<echo message="***** Shutting down Server instance *****" />
 		<java jar="${oc4j.admin.jar}" fork="yes">
@@ -10,4 +13,5 @@
 			<arg value="ordinary" />
 		</java>
 	</target>
+	
 </project>

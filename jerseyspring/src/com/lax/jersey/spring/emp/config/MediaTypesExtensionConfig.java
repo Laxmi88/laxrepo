@@ -26,7 +26,7 @@ public class MediaTypesExtensionConfig extends PackagesResourceConfig {
 		mediaTypeMap.put("json", MediaType.APPLICATION_JSON_TYPE);
 		mediaTypeMap.put("xml", MediaType.APPLICATION_XML_TYPE);
 		mediaTypeMap.put("csv", MediaType.valueOf("application/csv"));
-		return null;
+		return mediaTypeMap;
 	}
 
 }

@@ -1,14 +1,17 @@
-<project name="jrestfulservice" basedir="." default="undeploy-oc4j">
-  <property file="build.properties"/> 
-  <target name="undeploy-oc4j" depends="">
-	  <echo message="Deploying ${app.name} to ${oc4j.deployer.uri}" />
-  	  <echo message="Deploying EAR from ${dist.dir}" />
-	  <java jar="${oc4j.admin.jar}" fork="yes">
-		   <arg value="${oc4j.deployer.uri}" />
-		   <arg value="${oc4j.admin.user}" />
-		   <arg value="${oc4j.admin.password}" />
-		   <arg value="-undeploy" />
-		   <arg value="${app.name}" />
-	  </java>
-  </target>
+<project name="jrestfulservice-build" basedir="." default="undeploy-oc4j">
+	
+	<property environment="env"/>
+	<property file="build.properties"/> 
+	
+	<target name="undeploy-oc4j" depends="">
+		<echo message="Undeploying ${app.name}" />
+		<java jar="${oc4j.admin.jar}" fork="yes">
+			<arg value="${oc4j.deployer.uri}" />
+			<arg value="${oc4j.admin.user}" />
+			<arg value="${oc4j.admin.password}" />
+			<arg value="-undeploy" />
+			<arg value="${app.name}" />
+		</java>
+	</target>
+	
 </project>

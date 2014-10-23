@@ -24,8 +24,6 @@ public class EmployeeService {
 	@Path("/employeeId/{empId}")
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	public Employee getEmployeeDetails(@PathParam("empId") Integer employeeId){
-//		return "<Employee>" + "<EmployeeId>" + employeeId + "</EmployeeId>" + "</Employee>";
 		return new EmployeeBusinessManager().getEmployeeDetails();
 	}
-
 }

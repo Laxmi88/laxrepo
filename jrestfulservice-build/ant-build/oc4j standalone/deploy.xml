@@ -1,29 +1,32 @@
-<project name="jrestfulservice" basedir="." default="deploy-oc4j">
-  <property file="build.properties"/> 
+<project name="jrestfulservice-build" basedir="." default="deploy-oc4j">
 	
-  <target name="deploy-oc4j" depends="">
-	  <echo message="Deploying ${app.name} to ${oc4j.deployer.uri}" />
-  	  <echo message="Deploying EAR from ${dist.dir}" />
-	  <java jar="${oc4j.admin.jar}" fork="yes">
-		   <arg value="${oc4j.deployer.uri}" />
-		   <arg value="${oc4j.admin.user}" />
-		   <arg value="${oc4j.admin.password}" />
-		   <arg value="-deploy" />
-		   <arg value="-file" />
-		   <arg value="${dist.dir}/${app.name}.ear" />
-		   <arg value="-deploymentName" />
-		   <arg value="${app.name}" />
-	  </java>
-	  <echo message="Binding web application to ${app.name}" />
-	  <java jar="${oc4j.admin.jar}" fork="yes">
-		   <arg value="${oc4j.deployer.uri}" />
-	  	   <arg value="${oc4j.admin.user}" />
-		   <arg value="${oc4j.admin.password}" />
-		   <arg value="-bindWebApp" />
-		   <arg value="${app.name}" />
-		   <arg value="${app.name}" />
-		   <arg value="default-web-site" />
-		   <arg value="/${app.contextroot}" />
-	  </java>
-  </target>
+	<property environment="env"/>
+	<property file="build.properties"/> 
+	
+	<target name="deploy-oc4j" depends="">
+		<echo message="Deploying ${app.name} to ${oc4j.deployer.uri}" />
+		<echo message="Deploying EAR from ${dist.dir}" />
+		<java jar="${oc4j.admin.jar}" fork="yes">
+			<arg value="${oc4j.deployer.uri}" />
+			<arg value="${oc4j.admin.user}" />
+			<arg value="${oc4j.admin.password}" />
+			<arg value="-deploy" />
+			<arg value="-file" />
+			<arg value="${dist.dir}/${ear.name}" />
+			<arg value="-deploymentName" />
+			<arg value="${app.name}" />
+		</java>
+		<echo message="Binding web application to ${app.name}" />
+		<java jar="${oc4j.admin.jar}" fork="yes">
+			<arg value="${oc4j.deployer.uri}" />
+			<arg value="${oc4j.admin.user}" />
+			<arg value="${oc4j.admin.password}" />
+			<arg value="-bindWebApp" />
+			<arg value="${app.name}" />
+			<arg value="${app.name}" />
+			<arg value="default-web-site" />
+			<arg value="/${app.contextroot}" />
+		</java>
+	</target>
+	
 </project>
