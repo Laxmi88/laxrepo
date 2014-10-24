@@ -1,12 +1,12 @@
 /**
  * 
  */
-package com.lax.jersey.spring.emp.dao;
+package com.lax.jersey.spring.retek.dao;
 
 import java.util.List;
 
-import com.lax.jersey.spring.emp.dao.action.GetItemLocationDetailsAction;
-import com.lax.jersey.spring.emp.model.ItemLocation;
+import com.lax.jersey.spring.retek.dao.action.GetItemLocationDetailsAction;
+import com.lax.jersey.spring.retek.model.ItemLocation;
 
 /**
  * @author Lax

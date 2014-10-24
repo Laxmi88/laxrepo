@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.lax.jersey.spring.emp.constants;
+package com.lax.jersey.spring.retek.constants;
 
 /**
  * @author Lax

@@ -6,11 +6,11 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
      
-     <context:component-scan base-package="com.lax.jersey.spring.emp.ws,com.lax.jersey.spring.emp.business.manager" />
+     <context:component-scan base-package="com.lax.jersey.spring.retek.ws,com.lax.jersey.spring.retek.business.manager" />
      
      <bean id="itemLocationDao" 
-               class="com.lax.jersey.spring.emp.dao.ItemLocationDao" />
+               class="com.lax.jersey.spring.retek.dao.ItemLocationDao" />
      <bean id="itemLocationBusinessManager" 
-               class="com.lax.jersey.spring.emp.business.manager.ItemLocationBusinessManager" />
+               class="com.lax.jersey.spring.retek.business.manager.ItemLocationBusinessManager" />
  
 </beans>

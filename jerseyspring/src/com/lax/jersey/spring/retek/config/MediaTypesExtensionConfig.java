@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.lax.jersey.spring.emp.config;
+package com.lax.jersey.spring.retek.config;
 
 import java.util.HashMap;
 import java.util.Map;

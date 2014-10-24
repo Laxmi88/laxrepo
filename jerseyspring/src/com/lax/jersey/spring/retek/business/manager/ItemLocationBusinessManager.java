@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.lax.jersey.spring.emp.business.manager;
+package com.lax.jersey.spring.retek.business.manager;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.lax.jersey.spring.emp.dao.ItemLocationDao;
-import com.lax.jersey.spring.emp.model.ItemLocation;
+import com.lax.jersey.spring.retek.dao.ItemLocationDao;
+import com.lax.jersey.spring.retek.model.ItemLocation;
 
 /**
  * @author Lax

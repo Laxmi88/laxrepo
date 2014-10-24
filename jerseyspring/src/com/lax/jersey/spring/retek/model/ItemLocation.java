@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.lax.jersey.spring.emp.model;
+package com.lax.jersey.spring.retek.model;
 
 import java.io.Serializable;
 

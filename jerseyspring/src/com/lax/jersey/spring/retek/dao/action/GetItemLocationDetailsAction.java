@@ -1,9 +1,9 @@
-package com.lax.jersey.spring.emp.dao.action;
+package com.lax.jersey.spring.retek.dao.action;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lax.jersey.spring.emp.model.ItemLocation;
+import com.lax.jersey.spring.retek.model.ItemLocation;
 
 public class GetItemLocationDetailsAction {
 	public List<ItemLocation> execute(

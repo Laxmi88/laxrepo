@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.lax.jersey.spring.emp.provider;
+package com.lax.jersey.spring.retek.provider;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -15,7 +15,7 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.ext.MessageBodyWriter;
 import javax.ws.rs.ext.Provider;
 
-import com.lax.jersey.spring.emp.model.ItemLocation;
+import com.lax.jersey.spring.retek.model.ItemLocation;
 
 /**
  * @author Lax

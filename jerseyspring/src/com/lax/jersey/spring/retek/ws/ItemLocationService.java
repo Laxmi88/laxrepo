@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.lax.jersey.spring.emp.ws;
+package com.lax.jersey.spring.retek.ws;
 
 import java.util.List;
 
@@ -14,9 +14,9 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.lax.jersey.spring.emp.business.manager.ItemLocationBusinessManager;
-import com.lax.jersey.spring.emp.constants.JRestfulConstants;
-import com.lax.jersey.spring.emp.model.ItemLocation;
+import com.lax.jersey.spring.retek.business.manager.ItemLocationBusinessManager;
+import com.lax.jersey.spring.retek.constants.JRestfulConstants;
+import com.lax.jersey.spring.retek.model.ItemLocation;
 
 /**
  * @author Lax
