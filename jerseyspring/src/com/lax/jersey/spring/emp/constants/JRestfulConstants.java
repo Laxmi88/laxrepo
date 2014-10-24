@@ -9,6 +9,8 @@ package com.lax.jersey.spring.emp.constants;
  */
 public class JRestfulConstants {
 	
-	public static final String EMPLOYEE_RESTFUL_URI = "employeeService";
+	public static final String ITEMLOC_RESTFUL_URI = "itemLocService";
+	public static final String MIME_TYPE_CSV = "application/csv";
+	public static final String COMMA_DELIMITER = ",";
 
 }

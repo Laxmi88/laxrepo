@@ -8,9 +8,9 @@
      
      <context:component-scan base-package="com.lax.jersey.spring.emp.ws,com.lax.jersey.spring.emp.business.manager" />
      
-     <bean id="employeeDao" 
-               class="com.lax.jersey.spring.emp.dao.EmployeeDao" />
-     <bean id="employeeBusinessManager" 
-               class="com.lax.jersey.spring.emp.business.manager.EmployeeBusinessManager" />
+     <bean id="itemLocationDao" 
+               class="com.lax.jersey.spring.emp.dao.ItemLocationDao" />
+     <bean id="itemLocationBusinessManager" 
+               class="com.lax.jersey.spring.emp.business.manager.ItemLocationBusinessManager" />
  
 </beans>

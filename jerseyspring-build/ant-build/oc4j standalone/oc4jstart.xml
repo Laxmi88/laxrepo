@@ -1,4 +1,4 @@
-<project name="jrestfulservice-build" basedir="." default="oc4jstart">
+<project name="jerseyspring-build" basedir="." default="oc4jstart">
 	
 	<property environment="env"/>
 	<property file="build.properties"/> 
